@@ -66,6 +66,11 @@ if !exists("g:tidal_no_mappings") || !g:tidal_no_mappings
 
   imap <buffer> <c-e> <Esc><Plug>TidalParagraphSend<Esc>i<Right>
 
+  if !hasmapto('<Plug>TidalAllParagraphSend', 'n')
+    nmap <buffer> <localleader>sa <Plug>TidalAllParagraphSend
+    " nmap <buffer> <c-e> <Plug>TidalParagraphSend
+  endif
+
   nnoremap <buffer> <localleader>h :TidalHush<cr>
   nnoremap <buffer> <c-h> :TidalHush<cr>
   let i = 1

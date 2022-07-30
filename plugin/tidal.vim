@@ -427,3 +427,8 @@ noremap <unique> <script> <silent> <Plug>TidalLineSend :<c-u>call <SID>TidalSend
 noremap <unique> <script> <silent> <Plug>TidalMotionSend <SID>Operator
 noremap <unique> <script> <silent> <Plug>TidalParagraphSend <SID>Operatorip
 noremap <unique> <script> <silent> <Plug>TidalConfig :<c-u>TidalConfig<cr>
+
+" Send all paragraphs.
+command! -range TidalAllParagraphSend <line1>,<line2> s/^/<line1>,<line2>: /
+
+" g/\v.(\n\n|\n*%$)/ '{,. MyCom
