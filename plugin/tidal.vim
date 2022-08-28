@@ -65,6 +65,7 @@ if !exists("g:tidal_boot")
   if empty(g:tidal_boot)
     let g:tidal_boot = g:tidal_boot_fallback
   endif
+endif
 
 if !exists("g:tidal_superdirt_enable")
   " Allow vim-tidal to automatically start SuperDirt. Disabled by default.
